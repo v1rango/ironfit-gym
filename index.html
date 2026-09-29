@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRONFIT | باشگاه تخصصی بدنسازی و تناسب اندام</title>
+  <meta name="description" content="باشگاه ورزشی و بدنسازی IRONFIT - پیشرفته‌ترین تجهیزات، مربیان حرفه‌ای بین‌المللی، برنامه‌های تمرینی اختصاصی و محیطی مدرن.">
+  
+  <!-- Developer Meta / Portfolio Attribution -->
+  <meta name="author" content="آراد وفایی | Arad Vafaee (https://aradvafaee.ir)">
+  <meta name="creator" content="Arad Vafaee">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            iron: {
+              black: '#0a0a0a',
+              dark: '#111215',
+              card: '#16171b',
+              elevated: '#1f2127',
+              border: '#262932',
+              muted: '#8e929f'
+            },
+            neon: {
+              DEFAULT: '#bef202',
+              green: '#b8ee00',
+              lime: '#c4f82a',
+              glow: 'rgba(190, 242, 2, 0.4)'
+            }
+          },
+          fontFamily: {
+            sans: ['Vazirmatn', 'sans-serif'],
+            heading: ['Oswald', 'Montserrat', 'Vazirmatn', 'sans-serif'],
+            brand: ['Montserrat', 'Vazirmatn', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Vazirmatn & Oswald & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Oswald:wght@500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0a0a0a] text-white selection:bg-[#bef202] selection:text-black antialiased relative">
+
+  <!-- ====================================================
+       NAVBAR (هدر و ناوبری)
+       ==================================================== -->
+  <header id="main-navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav border-b border-neutral-900/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo (Right in RTL / Left in LTR) -->
+      <a href="#" class="flex items-center gap-2.5 group focus:outline-none">
+        <div class="w-9 h-9 rounded-xl bg-[#bef202] flex items-center justify-center text-black font-black shadow-[0_0_15px_rgba(190,242,2,0.4)] group-hover:scale-105 transition-transform">
+          <!-- Dynamic Dumbbell / Lightning Logo Icon -->
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+            <path d="M7 5v2H5v10h2v2h2v-2h6v2h2v-2h2V7h-2V5h-2v2H9V5H7zm2 4h6v6H9V9z"/>
+          </svg>
+        </div>
+        <span class="text-xl sm:text-2xl font-black tracking-wider font-brand text-white group-hover:text-[#bef202] transition-colors">IRONFIT</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#hero" class="text-[#bef202] font-bold flex items-center gap-1.5 transition-colors">
+          <span>خانه</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#bef202]"></span>
+        </a>
+        <a href="#classes" class="text-neutral-300 hover:text-[#bef202] transition-colors">برنامه‌ها</a>
+        <a href="#facilities" class="text-neutral-300 hover:text-[#bef202] transition-colors">درباره ما</a>
+        <a href="#contact" class="text-neutral-300 hover:text-[#bef202] transition-colors">تماس با ما</a>
+      </nav>
+
+      <!-- Action Buttons (Search, Profile, Join Button) -->
+      <div class="flex items-center gap-3">
+        <!-- Search Button -->
+        <button id="open-search-btn" class="p-2.5 rounded-full text-neutral-300 hover:text-[#bef202] hover:bg-neutral-800/60 transition-all cursor-pointer" title="جستجو">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- User Profile Button -->
+        <button class="open-membership-btn p-2.5 rounded-full text-neutral-300 hover:text-[#bef202] hover:bg-neutral-800/60 transition-all cursor-pointer" title="حساب کاربری">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </button>
+
+        <!-- CTA Membership Button -->
+        <a href="#pricing" class="open-membership-btn hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-[#bef202] text-black font-extrabold text-sm hover:bg-[#a6d900] shadow-[0_0_20px_rgba(190,242,2,0.35)] transition-all hover:scale-105 active:scale-95">
+          عضویت
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2.5 rounded-xl text-neutral-300 hover:text-white hover:bg-neutral-800 transition-colors" aria-label="منوی موبایل">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300 md:hidden"></div>
+  <div id="mobile-menu" class="fixed top-0 bottom-0 right-0 w-[280px] bg-[#111215] z-50 border-l border-neutral-800 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out md:hidden shadow-2xl">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-neutral-800">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-[#bef202] flex items-center justify-center text-black font-black">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M7 5v2H5v10h2v2h2v-2h6v2h2v-2h2V7h-2V5h-2v2H9V5H7zm2 4h6v6H9V9z"/></svg>
+          </div>
+          <span class="text-lg font-black tracking-wider font-brand text-white">IRONFIT</span>
+        </div>
+        <button id="mobile-menu-close" class="p-2 text-neutral-400 hover:text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-4 mt-6">
+        <a href="#hero" class="text-base font-bold text-[#bef202] py-2 flex items-center justify-between">
+          <span>خانه</span>
+          <span class="text-xs">←</span>
+        </a>
+        <a href="#classes" class="text-base font-medium text-neutral-300 hover:text-[#bef202] py-2 flex items-center justify-between">
+          <span>کلاس‌ها و برنامه‌ها</span>
+          <span class="text-xs">←</span>
+        </a>
+        <a href="#facilities" class="text-base font-medium text-neutral-300 hover:text-[#bef202] py-2 flex items-center justify-between">
+          <span>امکانات باشگاه</span>
+          <span class="text-xs">←</span>
+        </a>
+        <a href="#pricing" class="text-base font-medium text-neutral-300 hover:text-[#bef202] py-2 flex items-center justify-between">
+          <span>طرح‌های عضویت</span>
+          <span class="text-xs">←</span>
+        </a>
+        <a href="#testimonials" class="text-base font-medium text-neutral-300 hover:text-[#bef202] py-2 flex items-center justify-between">
+          <span>نظرات اعضا</span>
+          <span class="text-xs">←</span>
+        </a>
+        <a href="#contact" class="text-base font-medium text-neutral-300 hover:text-[#bef202] py-2 flex items-center justify-between">
+          <span>ارتباط با ما</span>
+          <span class="text-xs">←</span>
+        </a>
+      </nav>
+    </div>
+
+    <div>
+      <button class="open-membership-btn w-full py-3 rounded-xl bg-[#bef202] text-black font-black text-center text-sm shadow-[0_0_20px_rgba(190,242,2,0.4)]">
+        عضویت در باشگاه
+      </button>
+      <div class="mt-4 text-center">
+        <span class="text-xs text-neutral-500">طراحی شده توسط </span>
+        <a href="https://aradvafaee.ir" target="_blank" class="text-xs font-bold text-[#bef202] hover:underline">آراد وفایی</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ====================================================
+       HERO SECTION (بخش قهرمان و اسلایدر)
+       ==================================================== -->
+  <section id="hero" class="relative min-h-[92vh] flex items-center pt-24 pb-16 overflow-hidden">
+    
+    <!-- Background Image with Gradient Overlay -->
+    <div id="hero-bg-image" class="absolute inset-0 bg-cover bg-center transition-all duration-700 -z-10" style="background-image: url('assets/images/hero-athlete.jpg');"></div>
+    <div class="absolute inset-0 hero-gradient-overlay -z-10"></div>
+    <div class="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-[#bef202]/10 blur-[150px] rounded-full pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left / Text Content -->
+        <div class="lg:col-span-8 z-10 text-right">
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 mb-4">
+            <span class="w-2 h-2 rounded-full bg-[#bef202] animate-ping"></span>
+            <span id="hero-badge-text" class="text-xs sm:text-sm font-black tracking-widest text-[#bef202] uppercase font-brand">
+              STRONGER • HEALTHIER • BETTER
+            </span>
+          </div>
+
+          <!-- Bold Typography (English Master Title) -->
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight uppercase font-heading leading-tight mb-4">
+            <span id="hero-title-1" class="text-white block">YOUR FITNESS</span>
+            <span id="hero-title-2" class="text-[#bef202] block neon-text-glow">OUR MISSION</span>
+          </h1>
+
+          <!-- Persian Subheading & Copy -->
+          <div class="max-w-xl space-y-2 mb-8">
+            <h2 id="hero-desc-1" class="text-lg sm:text-2xl font-black text-white">
+              بدن سالم، ذهن قوی، زندگی بهتر
+            </h2>
+            <p id="hero-desc-2" class="text-sm sm:text-base text-neutral-300 leading-relaxed font-light">
+              در باشگاه ما فقط یک ورزشگاه نیست؛<br class="hidden sm:inline">
+              یک مسیر برای رسیدن به بهترین نسخه خودت هست.
+            </p>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4">
+            <!-- Primary CTA -->
+            <button class="open-membership-btn px-7 py-3.5 rounded-full bg-[#bef202] text-black font-black text-sm sm:text-base flex items-center gap-2 shadow-[0_0_25px_rgba(190,242,2,0.45)] hover:scale-105 active:scale-95 transition-all">
+              <span>همین حالا شروع کن</span>
+              <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+
+            <!-- Video / Programs CTA -->
+            <button id="open-video-btn" class="px-6 py-3.5 rounded-full bg-neutral-900/80 border border-neutral-700/80 text-white font-bold text-sm sm:text-base flex items-center gap-3 hover:border-[#bef202] hover:text-[#bef202] transition-all backdrop-blur-md active:scale-95">
+              <span class="w-7 h-7 rounded-full bg-neutral-800 flex items-center justify-center text-[#bef202]">
+                <svg class="w-3.5 h-3.5 fill-current ml-0.5" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </span>
+              <span>مشاهده برنامه‌ها</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right Side: Vertical Slide Indicator -->
+        <div class="lg:col-span-4 flex justify-end">
+          <div class="flex flex-col items-center gap-3 bg-black/40 backdrop-blur-md p-3 rounded-full border border-neutral-800/60 shadow-xl">
+            <button class="slider-indicator-btn text-sm font-black text-[#bef202] transition-colors p-1" title="اسلاید ۱">
+              <span id="hero-slide-num">01</span>
+            </button>
+            <div class="w-[2px] h-14 bg-neutral-800 relative rounded-full overflow-hidden">
+              <div class="absolute top-0 left-0 right-0 h-1/2 bg-[#bef202] rounded-full"></div>
+            </div>
+            <button class="slider-indicator-btn text-sm font-bold text-neutral-500 hover:text-white transition-colors p-1" title="اسلاید ۳">
+              03
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       KEY FEATURES BADGES (۴ مشخصه کلیدی)
+       ==================================================== -->
+  <section class="relative z-20 -mt-6 sm:-mt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="glass-card rounded-2xl p-6 sm:p-8 border border-neutral-800 shadow-2xl">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 divide-y sm:divide-y-0 sm:divide-x sm:divide-x-reverse divide-neutral-800">
+        
+        <!-- Feature 1: Modern Equipments -->
+        <div class="flex flex-col items-center text-center pt-4 sm:pt-0">
+          <div class="w-12 h-12 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-[#bef202] mb-3 shadow-[0_0_15px_rgba(190,242,2,0.15)]">
+            <svg class="w-6 h-6 stroke-current" fill="none" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M6 5v14M18 5v14M3 8v8M21 8v8M6 12h12"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-base mb-1">دستگاه‌های مدرن</h3>
+          <p class="text-xs text-neutral-400">به‌روزترین تجهیزات بدنسازی</p>
+        </div>
+
+        <!-- Feature 2: Pro Coaches -->
+        <div class="flex flex-col items-center text-center pt-4 sm:pt-0">
+          <div class="w-12 h-12 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-[#bef202] mb-3 shadow-[0_0_15px_rgba(190,242,2,0.15)]">
+            <svg class="w-6 h-6 stroke-current" fill="none" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-base mb-1">مربیان حرفه‌ای</h3>
+          <p class="text-xs text-neutral-400">همراهی در هر قدم از مسیر</p>
+        </div>
+
+        <!-- Feature 3: Custom Workout Plan -->
+        <div class="flex flex-col items-center text-center pt-4 sm:pt-0">
+          <div class="w-12 h-12 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-[#bef202] mb-3 shadow-[0_0_15px_rgba(190,242,2,0.15)]">
+            <svg class="w-6 h-6 stroke-current" fill="none" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-base mb-1">برنامه تمرینی اختصاصی</h3>
+          <p class="text-xs text-neutral-400">متناسب با هدف و بدن شما</p>
+        </div>
+
+        <!-- Feature 4: Safe & Clean Environment -->
+        <div class="flex flex-col items-center text-center pt-4 sm:pt-0">
+          <div class="w-12 h-12 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-[#bef202] mb-3 shadow-[0_0_15px_rgba(190,242,2,0.15)]">
+            <svg class="w-6 h-6 stroke-current" fill="none" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <path d="M9 12l2 2 4-4"></path>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-base mb-1">محیط امن و حرفه‌ای</h3>
+          <p class="text-xs text-neutral-400">نظافت، امنیت، آرامش</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       OUR CLASSES (انواع کلاس‌های ورزشی)
+       ==================================================== -->
+  <section id="classes" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div>
+        <span class="text-xs font-bold text-[#bef202] tracking-wider uppercase font-brand block mb-2">OUR CLASSES</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white mb-2">انواع کلاس‌های ورزشی</h2>
+        <p class="text-sm text-neutral-400 max-w-xl">
+          با توجه به هدف و سطح آمادگی خود، از بین کلاس‌های متنوع ما انتخاب کنید و مسیر سلامتی را با انرژی بیشتر ادامه دهید.
+        </p>
+      </div>
+
+      <a href="#classes" class="inline-flex items-center gap-2 text-sm font-bold text-neutral-300 hover:text-[#bef202] transition-colors group">
+        <span>مشاهده همه</span>
+        <svg class="w-4 h-4 transform rotate-180 group-hover:-translate-x-1 transition-transform text-[#bef202]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Classes Cards Grid (4 Cards) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Card 1: Bodybuilding -->
+      <div class="class-card group relative rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800/80 hover:border-[#bef202]/50 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer shadow-xl"
+           data-class-name="Bodybuilding" data-class-desc="افزایش حجم و قدرت عضلات با استانداردهای فدراسیون">
+        <div class="h-60 overflow-hidden relative">
+          <img src="assets/images/class-bodybuilding.jpg" alt="Bodybuilding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter brightness-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/40 to-transparent"></div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-black text-white font-brand group-hover:text-[#bef202] transition-colors">Bodybuilding</h3>
+            <p class="text-xs text-neutral-400 mt-1">افزایش حجم و قدرت عضلات</p>
+          </div>
+          <div class="w-9 h-9 rounded-full border border-neutral-700 bg-neutral-800/80 flex items-center justify-center text-neutral-300 group-hover:bg-[#bef202] group-hover:text-black group-hover:border-[#bef202] transition-all">
+            <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: CrossFit -->
+      <div class="class-card group relative rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800/80 hover:border-[#bef202]/50 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer shadow-xl"
+           data-class-name="CrossFit" data-class-desc="تمرینات پرفشار برای استقامت و سوزاندن حداکثر کالری">
+        <div class="h-60 overflow-hidden relative">
+          <img src="assets/images/class-crossfit.jpg" alt="CrossFit" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter brightness-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/40 to-transparent"></div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-black text-white font-brand group-hover:text-[#bef202] transition-colors">CrossFit</h3>
+            <p class="text-xs text-neutral-400 mt-1">ترکیبی از قدرت، استقامت و سرعت</p>
+          </div>
+          <div class="w-9 h-9 rounded-full border border-neutral-700 bg-neutral-800/80 flex items-center justify-center text-neutral-300 group-hover:bg-[#bef202] group-hover:text-black group-hover:border-[#bef202] transition-all">
+            <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Yoga -->
+      <div class="class-card group relative rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800/80 hover:border-[#bef202]/50 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer shadow-xl"
+           data-class-name="Yoga" data-class-desc="تقویت انعطاف، تعادل روحی و کاهش تنش‌های روزمره">
+        <div class="h-60 overflow-hidden relative">
+          <img src="assets/images/class-yoga.jpg" alt="Yoga" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter brightness-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/40 to-transparent"></div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-black text-white font-brand group-hover:text-[#bef202] transition-colors">Yoga</h3>
+            <p class="text-xs text-neutral-400 mt-1">انعطاف‌پذیری و آرامش ذهن</p>
+          </div>
+          <div class="w-9 h-9 rounded-full border border-neutral-700 bg-neutral-800/80 flex items-center justify-center text-neutral-300 group-hover:bg-[#bef202] group-hover:text-black group-hover:border-[#bef202] transition-all">
+            <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Cardio -->
+      <div class="class-card group relative rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800/80 hover:border-[#bef202]/50 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer shadow-xl"
+           data-class-name="Cardio" data-class-desc="سلامت عروقی، استقامت تنفسی و تناسب اندام تضمینی">
+        <div class="h-60 overflow-hidden relative">
+          <img src="assets/images/class-cardio.jpg" alt="Cardio" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter brightness-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/40 to-transparent"></div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-black text-white font-brand group-hover:text-[#bef202] transition-colors">Cardio</h3>
+            <p class="text-xs text-neutral-400 mt-1">چربی‌سوزی و سلامت قلب</p>
+          </div>
+          <div class="w-9 h-9 rounded-full border border-neutral-700 bg-neutral-800/80 flex items-center justify-center text-neutral-300 group-hover:bg-[#bef202] group-hover:text-black group-hover:border-[#bef202] transition-all">
+            <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       JOIN NOW BANNER & STATS (همین حالا عضو شوید و آمار)
+       ==================================================== -->
+  <section id="stats-counter-section" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative rounded-3xl overflow-hidden bg-[#111215] border border-neutral-800 p-8 sm:p-12 shadow-2xl">
+      
+      <!-- Background Glow & Athlete overlay -->
+      <div class="absolute right-0 top-0 bottom-0 w-full lg:w-1/2 bg-cover bg-center opacity-30 lg:opacity-50 pointer-events-none" style="background-image: url('assets/images/join-athlete.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-l from-transparent via-[#111215]/90 to-[#111215] pointer-events-none"></div>
+
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-4">
+          <span class="inline-block px-3 py-1 rounded-full bg-[#bef202]/10 text-[#bef202] text-xs font-black tracking-wider uppercase font-brand border border-[#bef202]/20">
+            JOIN NOW
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black text-white">
+            همین حالا عضو شوید!
+          </h2>
+          <p class="text-neutral-300 text-sm sm:text-base max-w-lg leading-relaxed">
+            با عضویت در باشگاه ما به دنیای سلامتی، انرژی و اعتماد به نفس قدم بگذارید.
+          </p>
+
+          <div class="pt-4">
+            <button class="open-membership-btn px-8 py-3.5 rounded-full bg-[#bef202] text-black font-black text-sm sm:text-base inline-flex items-center gap-2 shadow-[0_0_25px_rgba(190,242,2,0.45)] hover:scale-105 active:scale-95 transition-all">
+              <span>عضویت در باشگاه</span>
+              <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Side: Stats (3 items) -->
+        <div class="lg:col-span-5 flex flex-row lg:flex-col justify-between lg:justify-center items-center lg:items-end gap-6 sm:gap-8 pt-4 lg:pt-0 border-t lg:border-t-0 lg:border-r lg:pr-8 border-neutral-800">
+          
+          <div class="text-center lg:text-right">
+            <div id="counter-members" class="text-3xl sm:text-5xl font-black text-[#bef202] font-heading tracking-tight">+2K</div>
+            <div class="text-xs sm:text-sm text-neutral-400 mt-1">عضو فعال</div>
+          </div>
+
+          <div class="text-center lg:text-right">
+            <div id="counter-years" class="text-3xl sm:text-5xl font-black text-[#bef202] font-heading tracking-tight">+5</div>
+            <div class="text-xs sm:text-sm text-neutral-400 mt-1">سال تجربه</div>
+          </div>
+
+          <div class="text-center lg:text-right">
+            <div id="counter-satisfaction" class="text-3xl sm:text-5xl font-black text-[#bef202] font-heading tracking-tight">98%</div>
+            <div class="text-xs sm:text-sm text-neutral-400 mt-1">رضایت اعضا</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       OUR FACILITIES (امکانات باشگاه)
+       ==================================================== -->
+  <section id="facilities" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      
+      <!-- Left Content & 4 Cards Grid -->
+      <div class="lg:col-span-7">
+        <span class="text-xs font-bold text-[#bef202] tracking-wider uppercase font-brand block mb-2">OUR FACILITIES</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white mb-3">امکانات باشگاه</h2>
+        <p class="text-sm text-neutral-400 mb-8 max-w-lg leading-relaxed">
+          تمامی امکانات ما برای این است که بهترین تجربه ورزشی را برای شما فراهم کنیم
+        </p>
+
+        <!-- 4 Grid Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          
+          <!-- Facility 1 -->
+          <div class="p-6 rounded-2xl bg-neutral-900/90 border border-neutral-800/80 hover:border-[#bef202]/40 transition-colors flex flex-col items-start gap-3">
+            <div class="w-10 h-10 rounded-xl bg-neutral-800/80 flex items-center justify-center text-[#bef202]">
+              <svg class="w-5 h-5 stroke-current" fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M6 5v14M18 5v14M3 8v8M21 8v8M6 12h12"/></svg>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white">دستگاه‌های بدنسازی</h3>
+              <p class="text-xs text-neutral-400 mt-1">کامل و پیشرفته</p>
+            </div>
+          </div>
+
+          <!-- Facility 2 -->
+          <div class="p-6 rounded-2xl bg-neutral-900/90 border border-neutral-800/80 hover:border-[#bef202]/40 transition-colors flex flex-col items-start gap-3">
+            <div class="w-10 h-10 rounded-xl bg-neutral-800/80 flex items-center justify-center text-[#bef202]">
+              <svg class="w-5 h-5 stroke-current" fill="none" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white">رختکن و دوش</h3>
+              <p class="text-xs text-neutral-400 mt-1">تمیز و مجهز</p>
+            </div>
+          </div>
+
+          <!-- Facility 3 -->
+          <div class="p-6 rounded-2xl bg-neutral-900/90 border border-neutral-800/80 hover:border-[#bef202]/40 transition-colors flex flex-col items-start gap-3">
+            <div class="w-10 h-10 rounded-xl bg-neutral-800/80 flex items-center justify-center text-[#bef202]">
+              <svg class="w-5 h-5 stroke-current" fill="none" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white">کلاس‌های گروهی</h3>
+              <p class="text-xs text-neutral-400 mt-1">متنوع و حرفه‌ای</p>
+            </div>
+          </div>
+
+          <!-- Facility 4 -->
+          <div class="p-6 rounded-2xl bg-neutral-900/90 border border-neutral-800/80 hover:border-[#bef202]/40 transition-colors flex flex-col items-start gap-3">
+            <div class="w-10 h-10 rounded-xl bg-neutral-800/80 flex items-center justify-center text-[#bef202]">
+              <svg class="w-5 h-5 stroke-current" fill="none" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white">فضای هوازی</h3>
+              <p class="text-xs text-neutral-400 mt-1">ایمن و استاندارد</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Side: Gym Dumbbells Rack Image with Circular Button -->
+      <div class="lg:col-span-5 relative group">
+        <div class="rounded-3xl overflow-hidden border border-neutral-800 shadow-2xl relative h-[450px]">
+          <img src="assets/images/facility-dumbbells.jpg" alt="Dumbbells Facilities" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+          
+          <!-- Neon accent reflection line -->
+          <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+            <span class="text-sm font-bold text-neutral-200">تجهیزات به‌روز کلوپ بدنسازی</span>
+            <div class="w-12 h-12 rounded-full bg-black/60 border border-neutral-700 backdrop-blur-md flex items-center justify-center text-[#bef202] group-hover:bg-[#bef202] group-hover:text-black group-hover:border-[#bef202] transition-all shadow-lg">
+              <svg class="w-5 h-5 transform rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       PERSONAL TRAINING (مربی شخصی)
+       ==================================================== -->
+  <section id="personal-training" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative rounded-3xl overflow-hidden bg-neutral-950 border border-neutral-800 p-8 sm:p-14 shadow-2xl">
+      
+      <!-- Background Trainer Image Overlay -->
+      <div class="absolute inset-0 bg-cover bg-center opacity-35 filter brightness-75 pointer-events-none" style="background-image: url('assets/images/personal-trainer.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-neutral-950 via-neutral-950/80 to-transparent pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-xl text-right space-y-4">
+        <span class="text-xs font-bold text-[#bef202] tracking-wider uppercase font-brand block">PERSONAL TRAINING</span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white">مربی شخصی</h2>
+        <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">
+          با برنامه‌های اختصاصی و همراهی مربیان حرفه‌ای، سریع‌تر به هدفتان برسید
+        </p>
+
+        <div class="pt-4">
+          <button class="open-membership-btn px-7 py-3 rounded-full bg-[#bef202] text-black font-extrabold text-sm flex items-center gap-2 shadow-[0_0_20px_rgba(190,242,2,0.4)] hover:scale-105 active:scale-95 transition-all">
+            <span>اطلاعات بیشتر</span>
+            <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       PRICING (طرح‌های عضویت)
+       ==================================================== -->
+  <section id="pricing" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-xl mx-auto mb-14">
+      <span class="text-xs font-bold text-[#bef202] tracking-wider uppercase font-brand block mb-2">PRICING</span>
+      <h2 class="text-3xl sm:text-4xl font-black text-white mb-2">طرح‌های عضویت</h2>
+      <p class="text-sm text-neutral-400">انتخاب بهترین گزینه برای شما</p>
+    </div>
+
+    <!-- 3 Pricing Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+      
+      <!-- Plan 1: Bronze (برنزی) -->
+      <div class="pricing-card rounded-3xl bg-[#121316] border border-neutral-800 p-8 flex flex-col justify-between hover:border-neutral-700 transition-all shadow-xl"
+           data-plan-name="برنزی" data-plan-price="۱,۵۰۰,۰۰۰ تومان">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-bold px-3 py-1 rounded-full bg-neutral-800 text-neutral-300">۱ ماهه</span>
+            <span class="text-lg font-black text-white">برنزی</span>
+          </div>
+
+          <div class="mb-6">
+            <div class="text-2xl sm:text-3xl font-black text-white font-heading">1,500,000 <span class="text-xs font-normal text-neutral-400">تومان</span></div>
+          </div>
+
+          <div class="space-y-3.5 text-xs sm:text-sm text-neutral-300 border-t border-neutral-800/80 pt-6">
+            <div class="flex items-center gap-2">
+              <span class="text-[#bef202]">✔</span>
+              <span>دسترسی به سالن</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[#bef202]">✔</span>
+              <span>کلاس‌های گروهی</span>
+            </div>
+            <div class="flex items-center gap-2 text-neutral-500">
+              <span class="text-neutral-600">✔</span>
+              <span>تخفیف بوفه</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="pricing-select-btn mt-8 w-full py-3 rounded-xl bg-neutral-800/80 hover:bg-neutral-700 text-white font-bold text-sm transition-colors cursor-pointer">
+          انتخاب طرح
+        </button>
+      </div>
+
+      <!-- Plan 2: Gold (طلایی - FEATURED POPULAR NEON LIME CARD) -->
+      <div class="pricing-card rounded-3xl bg-[#bef202] text-black p-8 flex flex-col justify-between transform md:-translate-y-3 shadow-[0_0_35px_rgba(190,242,2,0.35)] relative overflow-hidden"
+           data-plan-name="طلایی (ویژه)" data-plan-price="۳,۹۰۰,۰۰۰ تومان">
+        
+        <div class="absolute top-4 left-4 bg-black/10 px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider">
+          پیشنهادی
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-black px-3 py-1 rounded-full bg-black/15 text-black">۳ ماهه</span>
+            <span class="text-lg font-black text-black">طلایی</span>
+          </div>
+
+          <div class="mb-6">
+            <div class="text-2xl sm:text-3xl font-black text-black font-heading">3,900,000 <span class="text-xs font-bold text-black/70">تومان</span></div>
+          </div>
+
+          <div class="space-y-3.5 text-xs sm:text-sm text-black font-medium border-t border-black/15 pt-6">
+            <div class="flex items-center gap-2">
+              <span class="font-bold">✔</span>
+              <span class="font-bold">دسترسی به سالن</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="font-bold">✔</span>
+              <span class="font-bold">کلاس‌های گروهی</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="font-bold">✔</span>
+              <span class="font-bold">مربی شخصی</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="font-bold">✔</span>
+              <span class="font-bold">۲ روز در هفته (۲ جلسه در هفته)</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="pricing-select-btn mt-8 w-full py-3 rounded-xl bg-black hover:bg-neutral-900 text-white font-black text-sm transition-all shadow-lg cursor-pointer">
+          انتخاب طرح
+        </button>
+      </div>
+
+      <!-- Plan 3: Platinum (پلاتینیوم) -->
+      <div class="pricing-card rounded-3xl bg-[#121316] border border-neutral-800 p-8 flex flex-col justify-between hover:border-neutral-700 transition-all shadow-xl"
+           data-plan-name="پلاتینیوم" data-plan-price="۶,۹۰۰,۰۰۰ تومان">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-bold px-3 py-1 rounded-full bg-neutral-800 text-neutral-300">۶ ماهه</span>
+            <span class="text-lg font-black text-white">پلاتینیوم</span>
+          </div>
+
+          <div class="mb-6">
+            <div class="text-2xl sm:text-3xl font-black text-white font-heading">6,900,000 <span class="text-xs font-normal text-neutral-400">تومان</span></div>
+          </div>
+
+          <div class="space-y-3.5 text-xs sm:text-sm text-neutral-300 border-t border-neutral-800/80 pt-6">
+            <div class="flex items-center gap-2">
+              <span class="text-[#bef202]">✔</span>
+              <span>دسترسی به سالن</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[#bef202]">✔</span>
+              <span>کلاس‌های گروهی</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[#bef202]">✔</span>
+              <span>مربی بدنسازی (۳ جلسه در هفته)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[#bef202]">✔</span>
+              <span>مشاوره تغذیه</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="pricing-select-btn mt-8 w-full py-3 rounded-xl bg-neutral-800/80 hover:bg-neutral-700 text-white font-bold text-sm transition-colors cursor-pointer">
+          انتخاب طرح
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       TESTIMONIALS (نظرات اعضا)
+       ==================================================== -->
+  <section id="testimonials" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-xl mx-auto mb-14">
+      <span class="text-xs font-bold text-[#bef202] tracking-wider uppercase font-brand block mb-2">TESTIMONIALS</span>
+      <h2 class="text-3xl sm:text-4xl font-black text-white mb-2">نظرات اعضا</h2>
+      <p class="text-sm text-neutral-400">تجربه واقعی افرادی که مثل شما بودند</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Review 1: سارا محمدی -->
+      <div class="p-6 rounded-2xl bg-neutral-900/80 border border-neutral-800 hover:border-neutral-700 transition-all flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="assets/images/user-sarah.jpg" alt="سارا محمدی" class="w-12 h-12 rounded-full object-cover border border-[#bef202]/30">
+            <div>
+              <h3 class="text-sm font-bold text-white">سارا محمدی</h3>
+              <div class="flex items-center text-[#bef202] text-xs mt-0.5">
+                ★★★★★
+              </div>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed">
+            «بهترین تصمیمی که گرفتم عضویت در این باشگاه بود. محیط عالی و مربیان فوق‌العاده‌ای دارن.»
+          </p>
+        </div>
+      </div>
+
+      <!-- Review 2: علی رضایی -->
+      <div class="p-6 rounded-2xl bg-neutral-900/80 border border-neutral-800 hover:border-neutral-700 transition-all flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="assets/images/user-ali.jpg" alt="علی رضایی" class="w-12 h-12 rounded-full object-cover border border-[#bef202]/30">
+            <div>
+              <h3 class="text-sm font-bold text-white">علی رضایی</h3>
+              <div class="flex items-center text-[#bef202] text-xs mt-0.5">
+                ★★★★★
+              </div>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed">
+            «برنامه تمرینی شخصی‌سازی شده و پیشرفت قابل توجهی داشتم. واقعاً راضی هستم.»
+          </p>
+        </div>
+      </div>
+
+      <!-- Review 3: مهدی کاظمی -->
+      <div class="p-6 rounded-2xl bg-neutral-900/80 border border-neutral-800 hover:border-neutral-700 transition-all flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="assets/images/user-mehdi.jpg" alt="مهدی کاظمی" class="w-12 h-12 rounded-full object-cover border border-[#bef202]/30">
+            <div>
+              <h3 class="text-sm font-bold text-white">مهدی کاظمی</h3>
+              <div class="flex items-center text-[#bef202] text-xs mt-0.5">
+                ★★★★★
+              </div>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed">
+            «تجهیزات مدرن، فضای تمیز و مربیان حرفه‌ای. پیشنهاد می‌کنم حتماً امتحان کنید.»
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       FINAL CTA BANNER (آماده‌ای تا شروع کنی؟)
+       ==================================================== -->
+  <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative rounded-3xl overflow-hidden bg-neutral-950 border border-neutral-800 p-8 sm:p-14 shadow-2xl">
+      
+      <!-- Background Weight Plates Image with Green Accent -->
+      <div class="absolute inset-0 bg-cover bg-center opacity-30 pointer-events-none" style="background-image: url('assets/images/cta-weights.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/90 pointer-events-none"></div>
+
+      <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-right">
+        <div>
+          <h2 class="text-2xl sm:text-4xl font-black text-white mb-2">آماده‌ای تا شروع کنی؟</h2>
+          <p class="text-sm sm:text-base text-neutral-300">
+            فرصت را از دست نده؛ همین حالا عضو شو و تغییر را احساس کن
+          </p>
+        </div>
+
+        <button class="open-membership-btn px-8 py-3.5 rounded-full bg-[#bef202] text-black font-black text-sm sm:text-base inline-flex items-center gap-2 shadow-[0_0_25px_rgba(190,242,2,0.45)] hover:scale-105 active:scale-95 transition-all flex-shrink-0">
+          <span>عضویت در باشگاه</span>
+          <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       FOOTER (فوتر و اطلاعات تماس)
+       ==================================================== -->
+  <footer id="contact" class="bg-black border-t border-neutral-900 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-neutral-800/80">
+        
+        <!-- Col 1: Brand & Tagline -->
+        <div class="md:col-span-4 space-y-4">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-[#bef202] flex items-center justify-center text-black font-black">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M7 5v2H5v10h2v2h2v-2h6v2h2v-2h2V7h-2V5h-2v2H9V5H7zm2 4h6v6H9V9z"/></svg>
+            </div>
+            <span class="text-xl font-black tracking-wider font-brand text-white">IRONFIT</span>
+          </div>
+          <p class="text-xs text-neutral-400">سلامتی، هدف ماست</p>
+
+          <!-- Social Media Icons -->
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://instagram.com/v1arad" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-[#bef202] hover:border-[#bef202] transition-colors" title="اینستاگرام">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://t.me/v1arad" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-[#bef202] hover:border-[#bef202] transition-colors" title="تلگرام">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.943z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-[#bef202] hover:border-[#bef202] transition-colors" title="یوتیوب">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="text-sm font-bold text-white mb-2">لینک‌های سریع</h4>
+          <ul class="space-y-2 text-xs text-neutral-400">
+            <li><a href="#hero" class="hover:text-[#bef202] transition-colors">خانه</a></li>
+            <li><a href="#classes" class="hover:text-[#bef202] transition-colors">برنامه‌ها</a></li>
+            <li><a href="#facilities" class="hover:text-[#bef202] transition-colors">درباره ما</a></li>
+            <li><a href="#contact" class="hover:text-[#bef202] transition-colors">تماس با ما</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div class="md:col-span-5 space-y-3">
+          <h4 class="text-sm font-bold text-white mb-2">تماس با ما</h4>
+          <ul class="space-y-2.5 text-xs text-neutral-400">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#bef202]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span dir="ltr">+98 912 345 6789</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#bef202]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span dir="ltr">info@ironfit.ir</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#bef202]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>تهران، خیابان ورزش، پلاک 12</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Copyright & Developer Info -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+        <div>
+          <span>© 2025 IronFit. All rights reserved.</span>
+        </div>
+
+        <!-- Portfolio Showcase Badge for Arad Vafaee -->
+        <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-300">
+          <span>توسعه و طراحی اختصاصی توسط:</span>
+          <a href="https://aradvafaee.ir" target="_blank" rel="noopener noreferrer" class="font-bold text-[#bef202] hover:underline flex items-center gap-1">
+            <span>آراد وفایی</span>
+            <svg class="w-3 h-3 text-[#bef202]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+
+        <div>
+          <span>از امروز قوی‌تر باش</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ====================================================
+       FLOATING DEVELOPER PORTFOLIO CARD (معرفی توسعه‌دهنده آراد وفایی)
+       ==================================================== -->
+  <div class="fixed bottom-6 left-6 z-40 hidden sm:block">
+    <!-- Floating Pill Button -->
+    <div class="relative group">
+      <button onclick="toggleDevCard()" class="flex items-center gap-2.5 px-3.5 py-2 rounded-full bg-neutral-900/90 hover:bg-neutral-800 border border-[#bef202]/30 hover:border-[#bef202] shadow-[0_4px_20px_rgba(0,0,0,0.6)] backdrop-blur-xl transition-all cursor-pointer">
+        <div class="relative w-7 h-7 rounded-full overflow-hidden border border-[#bef202]">
+          <img src="assets/images/arad-avatar.webp" alt="آراد وفایی" class="w-full h-full object-cover">
+          <span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-emerald-400"></span>
+        </div>
+        <div class="text-right">
+          <span class="text-[11px] font-black text-white block leading-tight">آراد وفایی</span>
+          <span class="text-[9px] text-[#bef202] block leading-tight">توسعه‌دهنده وب</span>
+        </div>
+        <span class="w-2 h-2 rounded-full bg-[#bef202] animate-ping ml-1"></span>
+      </button>
+
+      <!-- Expandable Developer Card -->
+      <div id="dev-info-popup" class="hidden absolute bottom-14 left-0 w-72 p-4 rounded-2xl bg-[#111215]/95 border border-neutral-700 shadow-2xl backdrop-blur-2xl text-right animate-subtle-float">
+        <div class="flex items-center justify-between pb-3 border-b border-neutral-800">
+          <div class="flex items-center gap-2.5">
+            <img src="assets/images/arad-avatar.webp" alt="Arad Vafaee" class="w-10 h-10 rounded-full border border-[#bef202] object-cover">
+            <div>
+              <h4 class="text-sm font-black text-white">آراد وفایی</h4>
+              <p class="text-[10px] text-neutral-400">معمار وب و متخصص سئو هوش مصنوعی</p>
+            </div>
+          </div>
+          <button onclick="toggleDevCard()" class="text-neutral-500 hover:text-white p-1">✕</button>
+        </div>
+
+        <p class="text-xs text-neutral-300 py-3 leading-relaxed">
+          «این وب‌سایت به عنوان نمونه کار اختصاصی با Tailwind CSS و جاوا اسکریپت پیاده‌سازی شده است.»
+        </p>
+
+        <div class="grid grid-cols-2 gap-2 pt-1">
+          <a href="https://aradvafaee.ir" target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-lg bg-[#bef202] text-black text-center font-extrabold text-xs hover:bg-[#a6d900] transition-colors shadow-[0_0_10px_rgba(190,242,2,0.3)]">
+            وب‌سایت شخصی
+          </a>
+          <a href="https://wa.me/989394606013" target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-lg bg-neutral-800 text-white text-center font-bold text-xs hover:bg-neutral-700 transition-colors border border-neutral-700">
+            واتس‌اپ
+          </a>
+        </div>
+
+        <div class="flex items-center justify-center gap-3 pt-3 mt-2 border-t border-neutral-800 text-xs text-neutral-400">
+          <a href="https://t.me/v1arad" target="_blank" class="hover:text-[#bef202]">تلگرام (@v1arad)</a>
+          <span>•</span>
+          <a href="https://github.com/v1rango" target="_blank" class="hover:text-[#bef202]">گیت‌هاب</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ====================================================
+       BACK TO TOP BUTTON
+       ==================================================== -->
+  <button id="back-to-top-btn" class="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-neutral-900/90 border border-neutral-700 text-[#bef202] hover:bg-[#bef202] hover:text-black transition-all opacity-0 invisible translate-y-4 shadow-xl cursor-pointer" title="بازگشت به بالا">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+
+  <!-- ====================================================
+       MODALS: MEMBERSHIP MODAL (مودال فرم عضویت)
+       ==================================================== -->
+  <div id="membership-modal" class="app-modal fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+    <div class="relative w-full max-w-md rounded-3xl bg-[#141518] border border-neutral-800 p-6 sm:p-8 shadow-2xl text-right">
+      
+      <!-- Close Button -->
+      <button id="close-membership-btn" class="absolute top-5 left-5 text-neutral-400 hover:text-white p-1 rounded-lg">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div class="mb-6">
+        <span class="text-xs font-bold text-[#bef202] uppercase tracking-wider font-brand">MEMBERSHIP</span>
+        <h3 class="text-xl sm:text-2xl font-black text-white mt-1">فرم عضویت در باشگاه</h3>
+        <p class="text-xs text-neutral-400 mt-1">اطلاعات خود را وارد کنید تا مشاوران ما با شما تماس بگیرند.</p>
+      </div>
+
+      <form id="membership-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-neutral-300 mb-1.5">نام و نام خانوادگی</label>
+          <input type="text" required placeholder="مثال: علی رضایی" class="w-full px-4 py-2.5 rounded-xl bg-neutral-900 border border-neutral-700 text-white text-sm focus:border-[#bef202] focus:outline-none transition-colors">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-neutral-300 mb-1.5">شماره تماس (همراه)</label>
+          <input type="tel" required placeholder="09123456789" dir="ltr" class="w-full px-4 py-2.5 rounded-xl bg-neutral-900 border border-neutral-700 text-white text-sm focus:border-[#bef202] focus:outline-none transition-colors text-right">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-neutral-300 mb-1.5">طرح انتخابی</label>
+          <input type="text" id="modal-plan-select" readonly value="طلایی (پیشنهادی)" class="w-full px-4 py-2.5 rounded-xl bg-neutral-800/60 border border-neutral-700 text-[#bef202] text-sm font-bold focus:outline-none cursor-not-allowed">
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3 rounded-xl bg-[#bef202] text-black font-black text-sm hover:bg-[#a6d900] shadow-[0_0_20px_rgba(190,242,2,0.4)] transition-all active:scale-95">
+            تأیید و ارسال درخواست عضویت
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ====================================================
+       MODALS: SEARCH MODAL (مودال جستجو)
+       ==================================================== -->
+  <div id="search-modal" class="app-modal fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+    <div class="relative w-full max-w-lg rounded-3xl bg-[#141518] border border-neutral-800 p-6 shadow-2xl text-right">
+      
+      <div class="flex items-center justify-between pb-4 border-b border-neutral-800 mb-4">
+        <h3 class="text-base font-bold text-white flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#bef202]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          جستجو در باشگاه IRONFIT
+        </h3>
+        <button id="close-search-btn" class="text-neutral-400 hover:text-white p-1">✕</button>
+      </div>
+
+      <div class="relative mb-4">
+        <input type="text" id="search-input" placeholder="نام کلاس، مربی، یا طرح مورد نظر خود را بنویسید..." class="w-full px-4 py-3 rounded-xl bg-neutral-900 border border-neutral-700 text-white text-sm focus:border-[#bef202] focus:outline-none">
+      </div>
+
+      <div id="search-results" class="max-h-60 overflow-y-auto space-y-2">
+        <div class="p-4 text-center text-xs text-neutral-400">عبارتی مانند «بدنسازی»، «طلایی» یا «مربی» را جستجو کنید...</div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ====================================================
+       MODALS: VIDEO / PROGRAM PREVIEW MODAL
+       ==================================================== -->
+  <div id="video-modal" class="app-modal fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+    <div class="relative w-full max-w-2xl rounded-3xl bg-[#111215] border border-neutral-800 p-6 shadow-2xl text-right">
+      <div class="flex items-center justify-between pb-4 border-b border-neutral-800 mb-4">
+        <h3 class="text-base font-bold text-white">تیزر معرفی باشگاه و برنامه‌ها</h3>
+        <button id="close-video-btn" class="text-neutral-400 hover:text-white p-1">✕</button>
+      </div>
+
+      <div class="aspect-video w-full rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 relative flex items-center justify-center group">
+        <img src="assets/images/cta-weights.jpg" alt="Video cover" class="w-full h-full object-cover filter brightness-50">
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+          <div class="w-16 h-16 rounded-full bg-[#bef202] flex items-center justify-center text-black font-black mb-3 shadow-[0_0_30px_rgba(190,242,2,0.6)] animate-pulse">
+            <svg class="w-8 h-8 fill-current ml-1" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <span class="text-white font-bold text-base">پیش‌نمایش ویدئویی باشگاه IRONFIT</span>
+          <span class="text-neutral-400 text-xs mt-1">تجهیزات روز، فضای اختصاصی و تمرین با مربیان ارشد</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Main Javascript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
